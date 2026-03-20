@@ -1,6 +1,6 @@
 <?PHP
   // include "control/listarProdutoController.php";
-  include 'control/listarindexController.php';
+  include 'control/listarIndexController.php';
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
