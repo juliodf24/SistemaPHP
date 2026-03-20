@@ -1,0 +1,40 @@
+.header_container {
+  background-color: #00172c;
+  width: 100vw;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  z-index: 1000;
+}
+
+.header_container_main {
+  background-color: #00172c;
+  display: flex;
+  width: 100%;
+  max-width: 1500px;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  padding: 10px;
+}
+
+.header_container_main .logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  height: 100%;
+}
+
+.header_container_main a {
+  text-decoration: none;
+  color: White;
+}
+
+/* Header */
+
+.Primeira_section {
+  margin-top: 75px;
+}

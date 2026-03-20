@@ -1,0 +1,76 @@
+ ********************CROUD{
+
+alterarCad.php{
+    FEITO
+    FALTA O CRUD
+}
+
+alterarEnd.php {
+    FEITO
+    FALTA O CRUD
+
+}
+carrinho.php{
+    CSS COMPLETO
+    IMPLEMENTAR O JAVA SCRIPT   
+}
+
+}
+
+
+CÓDIGOS NÃO DESENVOLVIDOS(SOMENTE CSS POR ENQUANTO) :
+1º PAINEL DE VENDEDOR;
+
+3º PAINEL DE ADMINISTRADOR.{
+    LISTA DE USUARIOS CONCLUIDA
+    
+}
+
+
+Gestão de Produtos:
+Adição, edição e exclusão de produtos.
+Gerenciamento de categorias e subcategorias de produtos.
+Configuração de atributos de produtos (peça,id , material, etc.).
+Monitoramento de estoque e controle de inventário.
+Definição de preços.
+
+Gestão de Pedidos:
+Visualização e processamento de pedidos.
+Atualização do status do pedido (em processamento, enviado, entregue, etc.).
+Geração de faturas e recibos.
+Comunicação com clientes sobre o status do pedido.
+
+Gestão de Clientes:
+Visualização e edição de informações de clientes.
+Histórico de compras dos clientes.
+Gerenciamento de contas de usuários.
+Resolução de problemas de clientes.
+
+Segurança e Configurações Gerais:
+Controle de acesso e permissões de usuário.
+
+
+
+
+****ALEXANDRE*****
+Gestão de Produtos:
+Adição, edição e exclusão de produtos.
+Monitoramento de estoque.
+
+Gestão de Pedidos:
+Visualização e processamento de pedidos.
+Atualização do status do pedido.
+
+*****FEITO****
+Gestão de Clientes: 
+Visualização de informações básicas de clientes.
+Histórico de compras dos clientes.
+
+Gráficos Simples:
+Gráficos básicos de vendas.
+
+Configurações Gerais:
+Configurações de pagamento e frete.
+Controle de acesso de usuário.
+
+FAZER O LINK DE TODOS OS CSS NOVAMENTE POIS MODIFICOU O NOME DA PASTA

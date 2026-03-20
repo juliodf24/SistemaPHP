@@ -1,0 +1,199 @@
+body {
+    height: 100vh;
+  }
+  
+  .card_container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    gap: 20px;
+  }
+  
+  .card_container .card {
+    background-color: white;
+    max-width: 780px;
+    width: 70%;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    border-radius: 10px;
+  }
+  
+  .card h2,
+  .card_secundaria h2 {
+    text-align: center;
+    font-size: 24px;
+    color: #00172C;
+  }
+  
+  
+  
+  .card_secundaria button {
+    border-radius: 10px;
+    background: #00172C;
+    color: white;
+    height: 40px;
+    outline: none;
+    cursor: pointer;
+    border: none;
+    padding: 7px;
+    width: 100%;
+  }
+  
+  
+  .card .detalhes {
+    font-size: 1rem;
+    color: rgb(102, 102, 102);
+    text-align: center;
+  }
+  
+  .card .detalhes a {
+    text-decoration: none;
+    text-decoration: underline;
+    color: rgb(102, 102, 102);
+  
+  }
+  
+  .card table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .card th {
+    text-align: left;
+    border-bottom: 2px solid #ccc;
+    padding: 15px 10px;
+    color: #666;
+  }
+  
+  .card td {
+    padding: 15px 5px;
+  }
+  
+  
+  .card tr {
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .preco,
+  .qtd,
+  .total {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .icone svg:hover {
+    fill: #fd384f;
+  }
+  
+  .icone {
+    width: 5%;
+  }
+  
+  .qtd {
+    height: 23px;
+  }
+  
+  .qtd #menos,
+  .qtd #mais {
+    background-color: #00172C;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    width: 20px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 2px;
+    height: 100%;
+  }
+  
+  .qtd #menos {
+    border-radius: 10px 0px 0px 10px;
+  }
+  
+  .qtd #mais {
+    border-radius: 0px 10px 10px 0px;
+  }
+  
+  .qtd span {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    padding: 1px;
+    border-bottom: 1px solid #00172C;
+    border-top: 1px solid #00172C;
+  }
+  
+  .card table a {
+    color: black;
+  }
+  
+  
+  .produto {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+  
+  .produto img {
+    width: 20%;
+    border-radius: 10px;
+  }
+  
+  .card_secundaria {
+    background-color: white;
+    max-width: 380px;
+    width: 70%;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    border-radius: 10px;
+  }
+  
+  .card_secundaria table {
+    width: 100%;
+  }
+  
+  .card_secundaria th {
+    text-align: left;
+    padding: 10px 0px;
+  }
+  
+  .card_secundaria td {
+    text-align: right;
+  }
+  
+  
+  
+  
+  @media only screen and (max-width: 600px) {
+    .card_container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+  
+    .card_container img {
+        display: none;
+    }
+  
+    .card_container .card {
+        max-width: 100%;
+        width: 100%;
+        padding: 0px;
+    }
+  
+    .card_secundaria {
+        max-width: 100%;
+        width: 100%;
+    }
+  }

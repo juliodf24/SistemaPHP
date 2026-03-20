@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/boot.css">
+    <link rel="stylesheet" href="../css/header_simples.css">
+    <link rel="stylesheet" href="../css/endereco.css">
+    <script src="../js/imask.js"></script>
+    <title>Mundo Autopeças</title>
+</head>
+
+<body>
+    <?php include "header_simples.php" ?>
+    <section class="Primeira_section card_container">
+        <form action="" id="formulario">
+            <h2>Adicionar Endereço</h2>
+
+            <div class="dados">
+                <label for="cep"><span style="color:red">*</span><b>CEP</b></label>
+                <input type="text" name="cepUsu" id="cep" placeholder="_____-___" required>
+            </div>
+
+            <div class="dados">
+                <label for="enderecoUsu"><span style="color:red">*</span><b>Endereço</b></label>
+                <input type="text" name="enderecoUsu" id="endereco" placeholder="" required>
+            </div>
+
+            <div class="dados">
+                <label for="numeroUsu"><b>Número</b></label>
+                <input type="text" name="numeroUsu" id="numero" placeholder="">
+            </div>
+
+            <div class="dados">
+                <label for="complementoUsu"><b>Complemento</b></label>
+                <input type="text" name="complementoUsu" id="complemento" placeholder="">
+            </div>
+
+            <div class="dados">
+                <label for="bairroUsu"><span style="color:red">*</span><b>Bairro</b></label>
+                <input type="text" name="bairroUsu" id="bairro" placeholder="" required>
+            </div>
+
+            <div class="dados">
+                <label for="cidadeUsu"><span style="color:red">*</span><b>Cidade</b></label>
+                <input type="text" name="cidadeUsu" id="cidade" placeholder="" required>
+            </div>
+
+            <div class="dados">
+                <label for="ufUsu"><span style="color:red">*</span><b>UF</b></label>
+                <select name="ufUsu" id="uf" required>
+                    <option value="" select></option>
+                    <option value="AC">AC</option>
+                    <option value="AL">AL</option>
+                    <option value="AP">AP</option>
+                    <option value="AM">AM</option>
+                    <option value="BA">BA</option>
+                    <option value="CE">CE</option>
+                    <option value="DF">DF</option>
+                    <option value="ES">ES</option>
+                    <option value="GO">GO</option>
+                    <option value="MA">MA</option>
+                    <option value="MT">MT</option>
+                    <option value="MS">MS</option>
+                    <option value="MG">MG</option>
+                    <option value="PA">PA</option>
+                    <option value="PB">PB</option>
+                    <option value="PR">PR</option>
+                    <option value="PE">PE</option>
+                    <option value="PI">PI</option>
+                    <option value="RJ">RJ</option>
+                    <option value="RN">RN</option>
+                    <option value="RS">RS</option>
+                    <option value="RO">RO</option>
+                    <option value="RR">RR</option>
+                    <option value="SC">SC</option>
+                    <option value="SP">SP</option>
+                    <option value="SE">SE</option>
+                    <option value="TO">TO</option>
+                </select>
+            </div>
+
+
+            <button onclick="return Validarform()">Cadastrar Endereço</button>
+
+        </form>
+    </section>
+
+    <script>
+        var cepCorreto = false;
+        var enderecoCorreto = false;
+        // var numeroCorreto = false;
+        var bairroCorreto = false;
+        var cidadeCorreto = false;
+
+        function Validarform() {
+            if (cepCorreto && enderecoCorreto && bairroCorreto && cidadeCorreto) {
+                return true
+            } else {
+                return false
+            }
+        }
+
+        var numeroInput = document.getElementById('numero');
+        numeroInput.addEventListener('input', function () {
+            this.value = this.value.replace(/\D/g, '');
+        });
+
+        var cepInput = document.getElementById('cep');
+        var mascaraCep = IMask(cepInput, {
+            mask: '00000-000'
+        });
+
+        var enderecoInput = document.getElementById('endereco');
+        var numeroInput = document.getElementById('numero');
+        var complementoInput = document.getElementById('complemento');
+        var bairroInput = document.getElementById('bairro');
+        var cidadeInput = document.getElementById('cidade');
+        var ufInput = document.getElementById('uf');
+
+        enderecoInput.addEventListener('blur', function () {
+            if (enderecoInput.value.length > 5) {
+                enderecoInput.style.border = "1px solid green";
+                enderecoCorreto = true;
+            } else {
+                enderecoInput.style.border = "1px solid red";
+                enderecoCorreto = false;
+            }
+        });
+        bairroInput.addEventListener('blur', function () {
+            if (bairro.value.length > 5) {
+                bairro.style.border = "1px solid green";
+                bairroCorreto = true;
+            } else {
+                bairro.style.border = "1px solid red";
+                bairroCorreto = false;
+            }
+        });
+        cidadeInput.addEventListener('blur', function () {
+            if (cidade.value.length > 5) {
+                cidade.style.border = "1px solid green";
+                cidadeCorreto = true;
+            } else {
+                cidade.style.border = "1px solid red";
+                cidadeCorreto = false;
+            }
+        });
+
+        cepInput.addEventListener('blur', function () {
+            var cepValue = cepInput.value.replace(/\D/g, '');
+
+            if (cepValue.length !== 8) {
+                cepInput.style.border = "1px solid red";
+                cepCorreto = false;
+                return;
+            }
+
+            fetch(`https://viacep.com.br/ws/${cepValue}/json/`)
+                .then(response => response.json())
+                .then(data => {
+                    if (!data.erro) {
+                        enderecoInput.value = data.logradouro;
+                        bairroInput.value = data.bairro;
+                        cidadeInput.value = data.localidade;
+                        ufInput.value = data.uf;
+                        complementoInput.focus();
+                        cepInput.style.border = "1px solid green";
+                        cepCorreto = true;
+                        enderecoCorreto = true;
+                        bairroCorreto = true;
+                        cidadeCorreto = true;
+                        ufInput.style.border = "1px solid green";
+                        enderecoInput.style.border = "1px solid green";
+                        bairroInput.style.border = "1px solid green";
+                        cidadeInput.style.border = "1px solid green";
+                        ufInput.style.border = "1px solid green";
+                    } else {
+                        cepInput.style.border = "1px solid red";
+                        cepCorreto = false;
+                    }
+                })
+                .catch(error => {
+                    console.error('Erro ao buscar CEP:', error);
+                });
+        });
+    </script>
+
+
+</body>
+
+</html>

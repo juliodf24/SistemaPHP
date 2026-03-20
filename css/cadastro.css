@@ -1,0 +1,116 @@
+body {
+    height: 100vh;
+}
+
+.card_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.card_container form {
+    background-color: white;
+    max-width: 500px;
+    width: 70%;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    border-radius: 20px;
+}
+
+form h2 {
+    text-align: center;
+    font-size: 24px;
+    color: #00172C;
+}
+
+form input {
+    width: 100%;
+    height: 45px;
+    border: 1px solid rgb(173, 173, 173);
+    padding: 10px;
+    border-radius: 8px;
+}
+
+form input[name=dtNascimentoUsu] {
+    max-width: 140px;
+}
+
+form input[name=cpfUsu] {
+    max-width: 150px;
+}
+
+form input[name=telefoneUsu] {
+    max-width: 190px;
+}
+
+form .dado {
+    display: flex;
+    flex-direction: column;
+}
+
+form p {
+    color: rgb(153, 153, 153);
+    margin-top: 3px;
+    margin-bottom: 3px;
+    font-size: 12px;
+}
+
+form label {
+    font-size: 0.875rem;
+    color: rgb(102, 102, 102);
+}
+
+form button {
+    border-radius: 10px;
+    background: #00172C;
+    color: white;
+    height: 40px;
+    outline: none;
+    cursor: pointer;
+    border: none;
+    padding: 7px;
+    width: 100%;
+}
+#formUser{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#formEndereco{
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#formUser .proximo, #formEndereco .button{
+    border-radius: 10px;
+    background: #00172C;
+    color: white;
+    height: 40px;
+    outline: none;
+    cursor: pointer;
+    border: none;
+    padding: 7px;
+    width: 100%;
+    margin: 10px 0px;
+    text-align: center;
+}
+
+
+
+form .detalhes {
+    font-size: 1rem;
+    color: rgb(102, 102, 102);
+    text-align: center;
+}
+
+form .detalhes p a {
+    text-decoration: none;
+    text-decoration: underline;
+    color: rgb(102, 102, 102);
+}

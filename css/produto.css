@@ -1,0 +1,224 @@
+ section {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5px;
+    padding: 20px;
+    max-width: 1100px;
+  }
+
+  main {
+    display: flex;
+    justify-content: center;
+    gap: 4%;
+    align-items: center;
+    width: 100%;
+    background-color: white;
+    border-radius: 30px;
+    border: 1px solid rgb(241, 241, 241);
+  }
+
+  main h1 {
+    font-size: 24px;
+  }
+
+  .imagem,
+  .produto {
+    background-color: white;
+    border-radius: 20px;
+    width: 600px;
+    padding: 30px;
+
+  }
+
+  .produto {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-right: 10px;
+    gap: 15px;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 1px 8px 0px;
+    border: 1px solid rgb(241, 241, 241);
+  }
+
+  .produto .classificacao {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .classificacao img {
+    width: 15px;
+  }
+
+  .container_preco .preco {
+    font-size: 24px;
+    color: #00172C;
+    font-weight: 600;
+  }
+
+  .btns {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .btns .qtd {
+    display: flex;
+    width: 100px;
+    height: 30px;
+  }
+
+  .btns span {
+    padding: 5px;
+    width: 28px;
+    outline: none;
+    border: none;
+    border-top: 1px solid #00172C;
+    border-bottom: 1px solid #00172C;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .btns .qtd button {
+    height: 100%;
+    width: 25%;
+    border: none;
+    outline: none;
+    background-color: #00172C;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  .btns #menos {
+    border-radius: 10px 0 0 10px;
+  }
+
+  .btns #mais {
+    border-radius: 0 10px 10px 0;
+  }
+
+  .btn_adicionar {
+    border-radius: 10px;
+    border: 1px solid #00172C;
+    background-color: transparent;
+    color: #00172C;
+    padding: 7px;
+    cursor: pointer;
+    width: 100%;
+  }
+
+  .btn_comprar {
+    border-radius: 10px;
+    background: #00172C;
+    color: white;
+    height: 40px;
+    outline: none;
+    cursor: pointer;
+    border: none;
+    padding: 7px;
+    width: 100%;
+  }
+
+  aside {
+    width: 100%;
+    padding: 30px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    border: 1px solid rgb(241, 241, 241);
+  }
+
+  .aside_descricao {
+    background-color: white;
+  }
+
+  .comentarios {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .mensagem {
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    padding: 10px;
+  }
+
+  .classificacao {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    gap: 2px;
+  }
+
+  .comentario {
+    margin: 10px;
+    color: black;
+    font-family: "Open Sans";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  .comentario>.img_comentario {
+    margin-top: 20px;
+    width: 50%;
+  }
+
+  .btn_comentario {
+    width: 200px;
+    background-color: white;
+  }
+
+  /* contador de numeros */
+  #plus {
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin-left: 1px;
+    background-color: white;
+    color: black;
+  }
+
+  #minus {
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin-left: 2px;
+    color: black;
+    background-color: white;
+  }
+
+  .count-button {
+    border-radius: 50%;
+    display: inline-block;
+    background-color: white;
+    border: none;
+    padding: 0;
+    width: auto;
+    height: auto;
+  }
+
+  #value {
+    margin: 0 1px;
+    color: white;
+    margin-left: 8px;
+  }
+
+  .container01 {
+    display: flex;
+    align-items: center;
+    background-color: #00172C;
+    width: 120px;
+    height: 33px;
+    padding: 5px;
+    border-radius: 10px;
+  }

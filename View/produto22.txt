@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/boot.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <title>Mundo Autopeças</title>
+</head>
+<style>
+    .conteudo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: 19px;
+    }
+
+    .barra_inferior {
+        display: flex;
+        width: 100%;
+        background-color: white;
+        gap: 20px;
+    }
+
+    .barra_superior {
+        display: flex;
+        gap: 20px;
+    }
+
+    .foto,
+    .painel {
+        padding: 30px;
+        border-radius: 10px;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .detalhes p,
+    .detalhes h2 {
+        background-color: white;
+        padding: 15px;
+    }
+
+    .detalhes,
+    .painel,
+    .comentarios,
+    .foto {
+        width: 30vw;
+    }
+
+    .painel,
+    .comentarios {
+        max-width: 400px;
+    }
+
+    .painel {
+        gap: 10px;
+    }
+
+    .painel>.btn_comprar {
+        border-radius: 10px;
+        background: #00172C;
+        color: white;
+        height: 40px;
+        outline: none;
+        cursor: pointer;
+        border: none;
+    }
+
+    .painel>H1 {
+        color: #000;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    .painel>.btns {
+        gap: 2px;
+    }
+
+    .btn_adicionar {
+        border-radius: 10px;
+        border: 1px solid #00172C;
+        background-color: transparent;
+        color: #00172C;
+        padding: 7px;
+        cursor: pointer;
+    }
+
+
+    .detalhes,
+    .comentarios {
+        padding: 30px;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .preco_detalhes {
+        width: 50%;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    .preco {
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    .avaliacoes {
+        color: #00172C;
+        font-size: 11px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    .painel>.classificacao {
+        display: flex;
+        align-items: center;
+        gap: 2px;
+        padding: 3px;
+    }
+
+    .comentarios {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .mensagem {
+        background-color: white;
+        border-radius: 20px;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        padding: 10px;
+    }
+
+    .classificacao {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        gap: 2px;
+    }
+
+    .comentario {
+        margin: 10px;
+        color: black;
+        font-family: "Open Sans";
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    .comentario>.img_comentario {
+        margin-top: 20px;
+        width: 50%;
+    }
+
+
+    /* contador de numeros */
+    #plus {
+        border-radius: 10px;
+        flex-shrink: 0;
+        margin-left: 12px;
+    }
+
+    #minus {
+        border-radius: 10px;
+        flex-shrink: 0;
+        margin-left: 2px;
+
+    }
+
+    .count-button {
+        border-radius: 10px;
+        width: 20px;
+        height: 20px;
+        flex-shrink: 0;
+        display: inline-block;
+        /* Garante que os botões fiquem na mesma linha */
+        background-color: white;
+        border: #ddd;
+    }
+
+    #value {
+        margin: 0 10px;
+        /* Adiciona um espaçamento entre os botões e o valor */
+        color: white;
+        margin-left: 14px;
+    }
+
+    .container {
+        display: flex;
+        /* Torna os elementos filhos flexíveis */
+        align-items: center;
+        /* Alinha os elementos verticalmente ao centro */
+        background-color: #00172C;
+        width: 100px;
+        height: 30px;
+        border-radius: 10px;
+
+    }
+
+
+
+    @media only screen and (max-width: 980px) {
+        body {
+            background-color: white;
+        }
+
+        .barra_inferior {
+            flex-direction: column;
+            gap: 0px;
+        }
+
+        .barra_superior {
+            flex-direction: column;
+            gap: 0px;
+        }
+
+        .foto,
+        .painel {
+            width: 100vw;
+            justify-content: space-around;
+        }
+
+        .detalhes,
+        .comentarios {
+            width: 100vw;
+            justify-content: space-around;
+        }
+
+        .painel,
+        .comentarios {
+            max-width: 1500px;
+        }
+
+        .detalhes {
+            background-color: #f4f4f4;
+        }
+    }
+
+    .product {
+        display: flex;
+        align-items: center;
+    }
+
+    .product button {
+        margin: 0 5px;
+        padding: 5px 10px;
+        border: none;
+        background-color: #ddd;
+        cursor: pointer;
+    }
+
+    .product span {
+        margin: 0 5px;
+        font-weight: bold;
+    }
+
+    .estrela {
+        width: 20px;
+    }
+</style>
+
+<body>
+    <?php include "header.php" ?>
+
+    <section class="Primeira_section">
+        <!-- esta no css header.css -->
+        <div class="conteudo">
+            <div class="barra_superior">
+                <div class="foto">
+                    <img src="img/prodex3.jpeg" width="100%">
+                </div>
+                <div class="painel">
+                    <h1>Carburador Fusca Kombi 1500 1600 H30 Original Brosol</h1>
+                    <div class="classificacao">
+                        <img src="img/icone/star_1.svg" alt="" class="estrela">
+                        <img src="img/icone/star_1.svg" alt="" class="estrela">
+                        <img src="img/icone/star_1.svg" alt="" class="estrela">
+                        <img src="img/icone/star_1.svg" alt="" class="estrela">
+                        <img src="img/icone/star_0.svg" alt="" class="estrela">
+                        <span class="avaliacoes">10.254 Avaliações</span>
+                    </div>
+                    <div class="preco_detalhes">
+                        <span class="preco">R$338</span><samp> no pix ou boleto ou em até 4x de R$ 84,5 sem juros</samp>
+                    </div>
+                    <!-- contador  -->
+                    <!-- <div class="container">
+                        <button id="minus" class="count-button">-</button>
+                        <span id="value">0</span>
+                        <button id="plus" class="count-button">+</button>
+
+                    </div> -->
+                    <select name="qtd" id="qtd">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                        <option value="18">18</option>
+                        <option value="19">19</option>
+                        <option value="20">20</option>
+
+                    </select>
+
+
+                    <!-- <p class="btns"><button>1 qtd</button> -->
+                    <button class="btn_adicionar">Adicionar ao carrinho</button>
+                    </p>
+                    <button class="btn_comprar">Comprar Agora</button>
+                </div>
+            </div>
+            <div class="barra_inferior">
+
+                <div class="detalhes">
+                    <h2>Descrição:</h2><br>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore possimus hic a omnis beatae at,
+                        atque fugiat aut expedita delectus. Aperiam repudiandae accusantium cum incidunt rerum
+                        laboriosam, sunt nulla voluptatum!</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis soluta alias cum reiciendis
+                        mollitia distinctio praesentium tempora quia. Illum vitae dolores perferendis fugiat voluptatem
+                        praesentium impedit sequi earum quos ratione.</p>
+                </div>
+            </div>
+            <div class="barra_inferior">
+                <div class="comentarios">
+                    <h2>Principais Avaliações</h2>
+                    <a href="adicionar_avaliacao.php"><button class="btn_adicionar">Adicionar Avaliação</button></a>
+                    <div class="mensagem">
+                        <div class="classificacao">
+                            <img src="img/icone/star_1.svg" alt="" class="estrela">
+                            <img src="img/icone/star_1.svg" alt="" class="estrela">
+                            <img src="img/icone/star_1.svg" alt="" class="estrela">
+                            <img src="img/icone/star_1.svg" alt="" class="estrela">
+                            <img src="img/icone/star_0.svg" alt="" class="estrela">
+                            <span class="nome">José eduardo</span>
+                        </div>
+                        <div class="comentario">
+
+                            <div class="texto_mensagem">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut iure nisi laudantium
+                                accusantium fugiat totam quidem numquam sint amet maxime atque eos iusto aliquid harum,
+                                commodi tenetur deserunt error? Autem!
+                            </div>
+                            <div class="img_comentario">
+                                <img src="img/prodex6.jpg" alt="" width="100%">
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="mensagem">
+                        <div class="classificacao">
+                            <img src="img/icone/star_1.svg" alt="" class="estrela">
+                            <img src="img/icone/star_1.svg" alt="" class="estrela">
+                            <img src="img/icone/star_1.svg" alt="" class="estrela">
+                            <img src="img/icone/star_0.svg" alt="" class="estrela">
+                            <img src="img/icone/star_0.svg" alt="" class="estrela">
+                            <span class="nome">José eduardo</span>
+                        </div>
+                        <div class="comentario">
+
+                            <div class="texto_mensagem">
+                                excelente peça, entregou no prazo.
+                            </div>
+                            <div class="img_comentario">
+                                <img src="" alt="" width="100%">
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+</body>
+
+</html>

@@ -1,0 +1,380 @@
+body {
+    height: 100vh;
+}
+
+h2 {
+    text-align: center;
+    padding: 10px;
+    font-size: 26px;
+}
+
+.card_container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    gap: 20px;
+}
+
+.card_container .card {
+    background-color: transparent;
+    max-width: 780px;
+    width: 70%;
+    padding: 25px;
+    padding-top: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    border-radius: 10px;
+}
+
+.card_info {
+    max-width: 780px;
+    width: 100%;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    border-radius: 10px;
+    background-color: white;
+}
+
+
+.card_info table {
+    width: 100%;
+}
+
+.card_info th {
+    text-align: left;
+}
+
+.card_info td {
+    text-align: left;
+}
+
+
+.card h2,
+.card_secundaria h2 {
+    text-align: center;
+    font-size: 20px;
+    color: #00172C;
+}
+
+
+
+.card_secundaria button {
+    border-radius: 10px;
+    background: #00172C;
+    color: white;
+    height: 40px;
+    outline: none;
+    cursor: pointer;
+    border: none;
+    padding: 7px;
+    width: 100%;
+}
+
+
+.card .detalhes {
+    font-size: 1rem;
+    color: rgb(102, 102, 102);
+    text-align: center;
+}
+
+.card .detalhes a {
+    text-decoration: none;
+    text-decoration: underline;
+    color: rgb(102, 102, 102);
+
+}
+
+
+
+.card_secundaria {
+    background-color: white;
+    max-width: 380px;
+    width: 70%;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    border-radius: 10px;
+}
+
+.card_secundaria table {
+    width: 100%;
+}
+
+.card_secundaria th {
+    text-align: left;
+    padding: 10px 0px;
+}
+
+.card_secundaria td {
+    text-align: right;
+}
+
+
+
+
+/* formas de pagamento  */
+#formaPag {
+    align-items: center;
+}
+
+/* Formas pagamento */
+
+.card_header {
+    display: flex;
+    text-align: center;
+}
+
+.card_menu {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.card_menu .titulo {
+    margin-right: auto;
+    margin-left: auto;
+    margin-left: calc(margin-left - 30px);
+}
+
+.card_menu button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.metodo {
+    border-radius: 10px;
+    border: 1px solid rgb(241, 241, 241);
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 1px 8px 0px;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    height: 60px;
+    align-items: center;
+}
+
+#ard_metodos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    width: 70%;
+    height: 100%;
+    margin-bottom: 15px;
+}
+
+.center {
+    align-self: flex-start;
+}
+
+.card .metodo img {
+    height: 100%;
+    align-self: center;
+}
+
+.card a {
+    text-decoration: none;
+    color: black;
+}
+
+.card a:hover {
+    background-color: #f8f8f8;
+}
+
+
+
+
+
+/* Cartão */
+#pagamento_cartao {
+    display: flex;
+    flex-direction: column;
+}
+
+.flip-card {
+    background-color: transparent;
+    width: 240px;
+    height: 154px;
+    perspective: 1000px;
+    color: white;
+}
+
+.heading_8264 {
+    position: absolute;
+    letter-spacing: .2em;
+    font-size: 0.5em;
+    top: 2em;
+    left: 18.6em;
+}
+
+.flip-card .logo {
+    position: absolute;
+    top: 6.8em;
+    left: 11.7em;
+}
+
+.chip {
+    position: absolute;
+    top: 2.3em;
+    left: 1.5em;
+}
+
+.contactless {
+    position: absolute;
+    top: 3.5em;
+    left: 12.4em;
+}
+
+.number {
+    position: absolute;
+    font-weight: bold;
+    font-size: .6em;
+    top: 8.3em;
+    left: 1.6em;
+}
+
+.valid_thru {
+    position: absolute;
+    font-weight: bold;
+    top: 635.8em;
+    font-size: .01em;
+    left: 140.3em;
+}
+
+.date_8264 {
+    position: absolute;
+    font-weight: bold;
+    font-size: 0.5em;
+    top: 13.6em;
+    left: 3.2em;
+}
+
+.name {
+    position: absolute;
+    font-weight: bold;
+    font-size: 0.5em;
+    top: 16.1em;
+    left: 2em;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.flip-card-front {
+    box-shadow: 0 8px 14px 0 rgba(0, 0, 0, 0.2);
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 1rem;
+}
+
+.flip-card-front {
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 2px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -1px 0px inset;
+    background-color: #171717;
+}
+
+/* fim Cartão */
+
+/* pagamento com cartao */
+.cartao {
+    align-self: center;
+}
+
+.formulario_cartao {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    align-self: center;
+}
+
+.formulario_cartao form {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    align-self: center;
+    gap: 19px;
+}
+
+.formulario_cartao form input {
+    width: 100%;
+    height: 45px;
+    border: 1px solid rgb(173, 173, 173);
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.formulario_cartao .data {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.formulario_cartao button {
+    border-radius: 10px;
+    background: #00172C;
+    color: white;
+    height: 40px;
+    outline: none;
+    cursor: pointer;
+    border: none;
+    padding: 7px;
+    width: 100%;
+}
+
+/* fim pagamento com cartao */
+
+
+
+
+#card_metodos {
+    display: block;
+    /* block */
+}
+
+#pagamento_cartao {
+    display: none;
+    /* flex */
+}
+
+
+@media only screen and (max-width: 600px) {
+    .card_container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .card_container .card {
+        max-width: 100%;
+        width: 100%;
+        padding: 0px;
+    }
+
+    .card_secundaria {
+        max-width: 100%;
+        width: 100%;
+    }
+}

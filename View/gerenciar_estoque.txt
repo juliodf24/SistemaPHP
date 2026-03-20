@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/boot.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <title>Mundo Autopeças</title>
+</head>
+<style>
+    body {
+        height: 100vh;
+    }
+
+    .card_container {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        gap: 20px;
+    }
+
+    .card_container .card {
+        background-color: white;
+        max-width: 800px;
+        width: 70%;
+        padding: 25px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        border-radius: 10px;
+    }
+
+    .card h2,
+    .card_secundaria h2 {
+        text-align: center;
+        font-size: 24px;
+        color: #00172C;
+    }
+
+
+    .card_secundaria button {
+        border-radius: 10px;
+        background: #00172C;
+        color: white;
+        height: 40px;
+        outline: none;
+        cursor: pointer;
+        border: none;
+        padding: 7px;
+        width: 100%;
+    }
+
+
+    .card .detalhes {
+        font-size: 1rem;
+        color: rgb(102, 102, 102);
+        text-align: center;
+    }
+
+    .card .detalhes a {
+        text-decoration: none;
+        text-decoration: underline;
+        color: rgb(102, 102, 102);
+
+    }
+
+    .card table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    .card th {
+        text-align: left;
+        border-bottom: 2px solid #ccc;
+        padding: 15px 10px;
+        color: #666;
+    }
+
+    .card td {
+        padding: 15px 5px;
+    }
+
+
+    .card tr {
+        border-bottom: 1px solid #ccc;
+    }
+
+    .marcaPro,
+    .codigoPro,
+    .valorVendaPro,
+    .valorCompraPro,
+    .qtdEstoquePro,
+    .total {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .icone svg:hover {
+        fill: #fd384f;
+    }
+
+    .icone {
+        width: 5%;
+    }
+
+    .qtd {
+        height: 23px;
+    }
+
+    .qtd span {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 30px;
+        padding: 1px;
+        border-bottom: 1px solid #00172C;
+        border-top: 1px solid #00172C;
+    }
+
+    .card table a {
+        color: black;
+    }
+
+
+    .produto {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .produto img {
+        width: 20%;
+        border-radius: 10px;
+    }
+
+    @media only screen and (max-width: 600px) {
+        .card_container{
+            flex-direction: column;
+            align-items: center;
+            justify-content:center ;
+        }
+        .card_container img{
+            display: none;
+        }
+        .card_container .card{
+            max-width: 100%;
+            width: 100%;
+            padding: 0px;
+        }
+    }
+
+</style>
+
+<body>
+    <?php include "header.php" ?>
+    <section class="Primeira_section card_container">
+        <div class="card">
+            <h2>Estoque</h2>
+            <table>
+                <tr>
+                    <th>Produto</th>
+                    <th>Marca</th>
+                    <th>Código</th>
+                    <th>Preço compra</th>
+                    <th>Preço venda</th>
+                    <th>Quantidade</th>
+                    <th class="icone"></th>
+                </tr>
+                <!-- produto -->
+                <tr>
+                    <td>
+                        <div class="produto">
+                            <img src="https://picsum.photos/200" alt="">
+                            <div class="infoPro">
+                                <div class="nomePro"><a href=""><b>Nome do produto</b></a></div>
+                                <div class="categoriaPro"><a href="">Categoria do produto</a></div>
+                            </div>
+                        </div>
+                    <td>
+                        <div class="marcaPro"><b>teste</b></div>
+                    </td>
+                    <td>
+                        <div class="codigoPro"><b>333</b></div>
+                    </td>
+                    </td>
+                    <td>
+                        <div class="valorCompraPro"><b>3,50</b></div>
+                    </td>
+                    <td>
+                        <div class="valorVendaPro"><b>7,00</b></div>
+                    </td>
+                    <td>
+                        <div class="qtdEstoquePro"><b>10</b></div>
+                    </td>
+                    <td>
+                        <div><b>?</b></div>
+                    </td>
+                </tr>
+                <!-- fim do produto -->
+            </table>
+    </section>
+</body>
+</html>
