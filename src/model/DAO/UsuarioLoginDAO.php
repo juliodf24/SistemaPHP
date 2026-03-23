@@ -1,4 +1,3 @@
-// dao/UsuarioDAO.php
 <?php
 include 'Conexao.php';
 require_once '../model/DTO/UsuariologinDTO.php';

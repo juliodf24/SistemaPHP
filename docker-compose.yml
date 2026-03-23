@@ -7,7 +7,7 @@ services:
     ports:
       - "8080:80"
     volumes:
-      - ./src:/var/www/html
+      - ./src:/var/www/html:delegated
     depends_on:
       - db
     environment:
@@ -15,6 +15,7 @@ services:
       DB_DATABASE: ${DB_DATABASE}
       DB_USER: ${DB_USER}
       DB_PASSWORD: ${DB_PASSWORD}
+    restart: always
 
   db:
     image: mariadb:10.6
@@ -39,6 +40,8 @@ services:
     environment:
       PMA_HOST: db
       MYSQL_ROOT_PASSWORD: root
+    depends_on:
+      - db
 
 volumes:
   db_data:

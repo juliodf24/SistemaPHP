@@ -17,9 +17,13 @@ class Conexao {
                 PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES UTF8;',
                 PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
             );
+                $host = getenv('DB_HOST');
+                $db   = getenv('DB_DATABASE');
+                $user = getenv('DB_USER');
+                $pass = getenv('DB_PASSWORD');
+
                 self::$conexao = new 
-                PDO("mysql:host=localhost;dbname=map",
-                "root","", $options);
+                PDO("mysql:host=$host;dbname=$db;charset=utf8mb4", $user, $pass, $options);
 
             } catch (PDOException $exc) {
                 echo "Erro ao conectar ao banco ".$exc->getMessage();

@@ -1,4 +1,3 @@
-// dto/UsuarioDTO.php
 <?php
 class UsuariologinDTO {
     public $emailUsu;
